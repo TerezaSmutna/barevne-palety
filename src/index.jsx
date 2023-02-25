@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 import { palettes } from './palettes.js';
+import SchemeColor from './components/SchemeColor';
 
 
 const App = () => {
@@ -15,9 +16,12 @@ const App = () => {
           <div className="palette-scheme palette-scheme--vertical">
             <img className="scheme-image" src="/img/mimosa-retreat.jpg" alt="Mimosa Retreat" />
             <div className="scheme-colors">
-              {
-                palettes[0].colors.map((color) => <div className="scheme-color" key={color} style={{ backgroundColor: color }} >{color}</div>)
-              }
+              {palettes[0].colors.map((color) => (
+                <SchemeColor
+                  color={color}
+                  key={color}
+                />
+              ))}
             </div>
           </div>
           <div className="palette-info">
@@ -32,9 +36,12 @@ const App = () => {
           <div className="palette-scheme palette-scheme--horizontal">
             <img className="scheme-image" src="/img/ocean-waves.jpg" alt="Ocean Waves" />
             <div className="scheme-colors">
-              {
-                palettes[1].colors.map((color) => <div className="scheme-color" key={color} style={{ backgroundColor: color }} >{color}</div>)
-              }
+              {palettes[1].colors.map((color) => (
+                <SchemeColor
+                  color={color}
+                  key={color}
+                />
+              ))}
             </div>
           </div>
           <div className="palette-info">
