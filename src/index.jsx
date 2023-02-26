@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 import { palettes } from './palettes.js';
-import SchemeColor from './components/SchemeColor';
 import Palette from './components/Palette';
 
 
@@ -13,12 +12,12 @@ const App = () => {
         <h1>Barevné palety</h1>
       </header>
       <main>
-      <Palette 
-        paletteData = {palettes[0]}
-      />
-      <Palette 
-        paletteData = {palettes[1]}
-      />
+        {palettes.map((palette) => (
+          <Palette
+            paletteData={palette}
+            key={palette.name}
+          />
+        ))}
       </main>
       <footer>
         <p>Czechitas, Digitální akademie: Web</p>
