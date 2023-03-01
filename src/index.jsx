@@ -4,7 +4,6 @@ import './style.css';
 import { palettes } from './palettes.js';
 import Palette from './components/Palette';
 
-
 const App = () => {
   return (
     <div className="container">
