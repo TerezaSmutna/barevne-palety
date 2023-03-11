@@ -9,7 +9,7 @@ const Palette = ({ paletteData }) => {
   return (
     <div className="palette">
       <div className={directionClass}>
-        <img className="scheme-image" src={paletteData.image} alt="Mimosa Retreat" />
+        <img className="scheme-image" src={paletteData.image} alt={paletteData.name} />
         <div className="scheme-colors">
           {paletteData.colors.map((color) => (
             <SchemeColor
